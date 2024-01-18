@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    /* 自動調整區塊尺寸，避免編輯後區塊超出網頁 */
+}
+
+body{
+    margin: 0;
+    /* 移除網頁白邊 */
+}
+
+
+.header{
+    height: 60px;
+    background-color: rgba(241, 227, 124, 0.8);
+    border-left: 6px solid rgb(213, 157, 25);
+    border-bottom: 3px solid rgb(213, 157, 25);
+
+
+    padding-left:6px ;
+    padding-top:10px ;
+
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.heroimg{
+    color: black;
+    width: 100%;
+    height: 100vh;
+    background-image:url(background.jpg);
+    background-position: center;
+    /* 調整背景圖片顯示的位置 */
+    background-size: cover;
+    /* 讓背景隨父元件縮放 */
+
+    /* background-attachment: fixed; */
+    /* 也可以鎖住背景圖，捲動起來會增加圖片的動態感 */
+
+    padding-top: calc(50vh - 57px);
+    /* 為了讓slogan能在heroimg中間，在heroimg使用padding-top，若輸入50vh無法達到真正的中間，這是因為它的100vh是包含了heroimg+slogan的高度，所以我們要再往上移"半個slogan"的高度，F12檢查slogan高度 */
+}
+
+.slogan{
+    margin: 0 auto;
+    /* 區塊的水平置中 */
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(200, 197, 194, 0.8);
+    text-align: center;
+    /* 文字的水平置中 */
+    font-family: sans-serif;
+    
+}
+
+.title{
+    font-size: 40px;
+    font-weight:600 ;
+    
+}
+
+.button{
+    display: block;
+    /* 因為我們使用<a>作為button，<a>原本屬於inline元素無法套入尺寸的設定，需改成block元素 */
+    /* block元素會佔據整行:div, h, p；inline元素可以連續使用:a, img, span。 */
+    margin: 10px auto;
+    width: 200px;
+    padding: 5px;
+    background-color: hsl(36, 100%, 49%);
+    border-radius: 5px ;
+
+    color:white;
+    text-decoration: none;
+
+}
+
+.button:hover{
+    background-color: rgb(207, 70, 70);
+    color: aliceblue;
+}
+
+.content{
+    height:1000px;
+}
+
+/* CSS聲明的順序通常沒有影響性，但實務上仍有息觀的編寫順序
+(1)區塊定義...display, position
+(2)box model...padding, margin, 寬高, 背景
+(3)文字類...size, color, text-decoration, font-family
+(4)特效類...透明度, 變形, 漸變 */
